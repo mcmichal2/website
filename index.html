@@ -19,25 +19,31 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="home"></div>
     <header class="main-header">
+      <div class="burger">
+        <span class="burger-item"></span>
+        <span class="burger-item"></span>
+        <span class="burger-item"></span>
+      </div>
       <div class="container">
         <a href="#" class="logo">
           <img src="img/logo.png" alt="Company" />
         </a>
         <nav>
           <ul class="menu-items">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#team">Our Team</a></li>
             <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li class="menu-icon"><a href="#" class="facebook-icon"></a></li>
             <li class="menu-icon"><a href="#" class="twitter-icon"></a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section class="page-section intro-section">
+    <section class="page-section intro-section ">
       <header class="section-header">
         <h2 class="intro-title">Check our creativity</h2>
         <p class="intro-subtitle">We are the best and we know it!</p>
@@ -94,7 +100,7 @@
     <section class="ask-for-price">
       <a href="#" class="btn ask-btn">Ask for price</a>
     </section>
-    <section class="how-we-work">
+    <section class="how-we-work" id="aboutUs">
       <div class="container">
         <h3>How we work</h3>
         <p class="text-modal">We are the best and we know it!</p>
@@ -120,7 +126,7 @@
         <a href="#" class="btn">Ask for price</a>
       </div>
     </section>
-    <section class="team ">
+    <section class="team " id="team">
       <div class="container">
         <h3 class="team-slogan">Meet our team</h3>
         <p class="text-modal">We are the best!</p>
@@ -163,7 +169,7 @@
         </section>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <h3>Contact us</h3>
         <p class="text-modal">Use form below!</p>
