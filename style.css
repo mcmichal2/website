@@ -451,6 +451,9 @@ footer {
   .menu-items {
     flex-direction: column;
   }
+   .btn{
+     padding: 15px 40px;
+  }  
   .feature-boxes > .container {
     flex-direction: column;
   }
