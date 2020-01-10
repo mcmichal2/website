@@ -9,33 +9,40 @@ const burger = document.querySelector(".burger");
 const burgerSpan = burger.querySelectorAll("span");
 let offsets = [];
 let section = document.querySelectorAll("section");
-let sectionWithId=[];
-for(sec of section){
-  if(sec.hasAttribute("id")){
+let sectionWithId = [];
+for (sec of section) {
+  if (sec.hasAttribute("id")) {
     sectionWithId.push(sec);
   }
 }
 
-const options={
-  threshold:.54,
+const options = {
+  threshold: .54,
 }
-function checkHeight(entries){
-  entries.forEach(entry=>{
+function checkHeight(entries) {
+ 
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
     let visibleSection = entry.target.getAttribute("data-index");
-    for(menuItem of menuItems){
+    console.log(visibleSection)
+    for (menuItem of menuItems) {
+     
       menuItem.classList.remove("active");
       menuItems[visibleSection].classList.add("active");
-    }
-  });
- 
-}
+    }}
+  })
+};
+
+
+
+
 
 let observer = new IntersectionObserver(checkHeight, options);
-sectionWithId.forEach(el=>{observer.observe(el)});
+sectionWithId.forEach(el => { observer.observe(el) });
 
 // disabling active class adding  by scroll on mobiledevices
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const arrayFromSection = [...section];
   //   const offsets = [];
   for (el of arrayFromSection) {
@@ -45,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
   //   console.log(offsets);
 });
 if (window.innerWidth <= 800) {
-  document.addEventListener("scroll", function() {
+  document.addEventListener("scroll", function () {
     if (
       (window.scrollY >= offsets[5] && window.scrollY <= offsets[6]) ||
       window.scrollY >= offsets[8]
@@ -58,7 +65,7 @@ if (window.innerWidth <= 800) {
 }
 
 if (window.innerWidth > 800) {
-  document.addEventListener("scroll", function() {
+  document.addEventListener("scroll", function () {
     // console.log(window.scrollY);
     if (window.scrollY > 100) {
       menu.classList.add("active");
@@ -82,11 +89,11 @@ if (window.innerWidth > 800) {
 
 
 
- 
+
 
 
 // burger-nav-button
-burger.addEventListener("click", function() {
+burger.addEventListener("click", function () {
   const burgerItems = document.querySelectorAll(".burger-item");
 
   for (burgerItem of burgerItems) {
