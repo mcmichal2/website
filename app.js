@@ -17,7 +17,7 @@ for (sec of section) {
 }
 
 const options = {
-  threshold: .54,
+  threshold: .59,
 }
 function checkHeight(entries) {
  
